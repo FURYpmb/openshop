@@ -1,0 +1,1320 @@
+@import 'fonts.css';
+
+:root {
+    --f400: 'R400';
+    --f700: 'R700';
+    --m-color: #313131;
+
+    --theme-color: #313131;
+    --theme-bg: #fff;
+    --theme-info: #fff;
+}
+
+/* @media(prefers-color-scheme: dark) {
+    :root {
+        --theme-bg: #313131;
+    }
+} */
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+.button {
+    background: var(--m-color);
+    color: #ffffff;
+    padding: 12px 46px;
+    font-family: var(--f400);
+    font-size: 18px;
+    line-height: 25px;
+    display: inline-block;
+}
+
+
+
+/* nav */
+
+/* body {
+    background: var(--theme-bg);
+} */
+
+.menu {
+    background: var(--m-color);
+}
+
+.menu__inner {
+    padding: 15px 0;
+}
+
+.menu__select {
+    min-width: 0;
+}
+
+.menu__btn {
+    padding: 0;
+    display: block;
+    background: var(--m-color);
+    border: none;
+    max-height: 20px;
+}
+
+
+.menu__link {
+    display: inline-block;
+    font-family: var(--f400);
+    font-size: 14px;
+    line-height: 19px;
+    color: #ffffff;
+    padding-left: 36px;
+}
+
+.menu__phone,
+.menu__user {
+    width: 15px;
+}
+
+.menu__cart {
+    width: 17px;
+}
+
+.nav__logo {
+    padding: 18px 0;
+}
+
+.nav__inner {
+    display: flex;
+}
+
+
+.nav__info {
+    display: flex;
+    align-items: center;
+    padding-left: 143px;
+}
+
+.nav__control {
+    padding: 16px 151px 15px 10px;
+    height: 50px !important;
+    border-radius: 0 !important;
+    border: 1px solid #313131;
+}
+
+.nav__search {
+    display: inline-block;
+    padding: 0 17px 0 15px;
+    color: #ffffff;
+    background: var(--m-color) !important;
+    font-size: 14px;
+    line-height: 19px;
+    font-family: var(--f400);
+    border: none !important;
+    height: 50px;
+    width: 300px;
+}
+
+.nav__list {
+    display: flex;
+    justify-content: center;
+}
+
+.nav__btn {
+    background: #ffffff !important;
+    color: var(--m-color);
+    font-size: 18px;
+    line-height: 27px;
+    font-family: var(--f400);
+    font-weight: bold !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    outline: none !important;
+    position: relative;
+    display: flex;
+    justify-content: center;    
+}
+
+.nav__btn::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    display: block;
+    background: #313131;
+    position: absolute;
+    bottom: 0;
+    transition: 250ms;
+}
+
+.nav__btn:hover::after {
+    width: 100%;
+}
+
+.nav__btn:hover {
+    color: var(--m-color); 
+}
+
+
+/* slider */
+
+.carousel [data-target] {
+    background: #ABABAB;
+    width: 10px;
+    height: 10px;
+    border: 0;
+    border-radius: 50%;
+}
+
+.carousel [data-target].active {
+    background: var(--m-color);
+}
+
+
+.carousel__img {
+    margin-top: 50px;
+}
+
+.carousel__title {
+    margin-top: 163px;
+    font-size: 48px;
+    line-height: 70px;
+    font-family: var(--f700);
+    /* font-size: 3rem; */
+}
+
+.carousel__btn {
+    margin: 118px 0 121px;
+}
+
+.carousel__info {
+    max-width: 630px;
+    text-align: center;
+}
+
+/* Skidka */
+
+.skidka__grid {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.skidka__item:nth-of-type(1) {
+    grid-row: span 2;
+    grid-column: span 2;
+}
+.skidka__item:nth-of-type(2) {
+    grid-row: span 1;
+    grid-column: span 2;
+}
+.skidka__item:nth-of-type(3) {
+    grid-row: span 1;
+    grid-column: span 1;
+}
+.skidka__item:nth-of-type(4) {
+    grid-row: span 1;
+    grid-column: span 1;
+}
+
+.skidka__item {
+    position: relative !important;
+}
+
+.skidka__img {
+    object-fit: cover;
+}
+
+.skidka__info {
+    top: 0;
+    position: absolute !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+
+}
+
+.skidka__name {
+    padding: 15px 0 15px 20px;
+}
+
+
+.skidka__off {
+    margin: 20px 0 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    background: var(--m-color);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    font-size: 20px;
+    line-height: 20px;
+    font-family: var(--f400);
+}
+
+.skidka__title {
+    font-size: 24px;
+    line-height: 20px;
+    font-family: var(--f400);
+    font-weight: bold !important;
+}
+
+.skidka__text {
+    font-size: 24px;
+    line-height: 15px;
+    font-family: var(--f400);
+}
+
+.skidka__button {
+    text-align: center;
+    margin: 42px 0 70px 0;
+}
+
+
+.cards__title {
+    margin: 70px 0 30px;
+    color: var(--m-color);
+    font-size: 36px;
+    line-height: 49px;
+    font-family: var(--f700);
+    font-weight: lighter !important;
+}
+
+.cards__item {
+    max-width: 300px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hover__link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+}
+
+.cards__item:hover .hover__link {
+    opacity: 1;
+}
+
+.hover__buy {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+}
+
+.hover__buy-text {
+    padding: 5px 36px;
+    background: #313131;
+    font-size: 14px;
+    line-height: 19xpx;
+    font-family: var(--f400);
+    color: #ffffff;
+    opacity: 0;
+}
+
+.cards__item:hover .hover__buy-text {
+    opacity: 1;
+}
+.cards__info {
+    position: absolute;
+    top: 0;
+    text-align: center;
+}
+
+.cards__menu-phone {
+    font-family: var(--f700);
+    font-weight: lighter !important;
+    font-size: 16px;
+    line-height: 22px;
+    padding-top: 226px;
+    margin-bottom: 0 !important;
+}
+
+.cards__menu-laptop {
+    font-family: var(--f700);
+    font-weight: lighter !important;
+    font-size: 16px;
+    line-height: 22px;
+    padding-top: 237px;
+    margin-bottom: 0 !important;
+}
+
+.cards__menu-seller {
+    font-family: var(--f700);
+    font-weight: lighter !important;
+    font-size: 16px;
+    line-height: 22px;
+    padding-top: 239px;
+    margin-bottom: 0 !important;
+}
+
+.cards__text {
+    color: var(--m-color);
+    font-size: 14px;
+    line-height: 19px;
+    font-family: var(--f400);
+}
+
+.cards__costs {
+    color: var(--m-color);
+    display: flex;
+    justify-content: space-between;
+}
+
+.playstation {
+    margin: 70px 0 70px;
+}
+
+
+.playstation__item {
+    position: relative;
+}
+
+
+.playstation__inner {
+    top: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 20px;
+}
+
+.playstation__logo {
+    margin-top: 94px;
+}
+
+.playstation__title {
+    margin: 20px 0 70px;
+    font-size: 48px;
+    line-height: 65px;
+    font-family: var(--f700);
+    font-weight: lighter !important;
+}
+
+.controller__fon {
+    margin-top: 375px ;
+    position: relative;
+    height: 195px;
+    background: #E3E3E3;
+}
+
+.controller__up {
+    position: absolute;
+    bottom: 0;
+}
+
+.controller__ctrl {
+    position: relative;
+
+}
+
+.controller__inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+.controller__title {
+    font-family: var(--f700);
+    font-weight: lighter !important;
+    font-size: 48px;
+    line-height: 65px;
+    margin: 10px 20px;
+}
+
+.controller__text {
+    display: block;
+    font-size: 24px;
+    line-height: 32px;
+    font-family: var(--f400);
+    margin-left: 20px;
+    max-width: 454px;
+}
+
+.controller__button {
+    margin: 0 0 20px 20px;
+}
+
+/* Footer */
+
+.footer {
+    background: var(--m-color);
+}
+
+.footer__sign {
+    padding: 30px 0 45px 0;
+}
+
+.footer__inner {
+    display: flex;
+}
+
+
+.footer__sign-up {
+    display: flex;
+    align-items: center;
+    padding-left: 143px;
+}
+
+.footer__subscribe {
+    padding-left: 143px;
+}
+
+
+.footer__subscribe-text {
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 18px;
+    font-family: var(--f400);
+    margin-bottom: 5px !important;
+}
+
+.footer__control {
+    padding: 16px 261px 15px 10px;
+    height: 50px !important;
+    border-radius: 0 !important;
+    max-width: 330px;
+}
+
+.footer__search {
+    display: inline-block;
+    width: 190px;
+    color: #ffffff;
+    background: var(--m-color) !important;
+    font-size: 14px;
+    line-height: 19px;
+    font-family: var(--f400);
+    height: 50px;
+    border: 1px solid #ffffff !important;
+}
+
+.footer__contact {
+    display: flex;
+    align-items: center;
+    padding-left: 54px;
+}
+
+.footer__contact-logo {
+    margin: 0 13px 0 12px;
+}
+
+.footer__down {
+    padding-top: 50px;
+    text-align: center;
+}
+
+.footer__down-text {
+    padding: 0 15px 0 15px;
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 24px;
+    font-family: var(--f400);
+}
+
+.controller__next-inner {
+    padding: 0 !important;
+    margin: 48px 0 48px 0;
+}
+
+.page__item {
+    border-right: solid 2px;
+}
+
+.page-link {
+    font-family: var(--f400);
+    font-size: 30px;
+    line-height: 41px;
+    border: none !important;
+    color: var(--m-color);
+}
+
+.controller__icon {
+    font-size: 18px;
+    margin-left: 12px;
+}
+
+.icon__center {
+    display: flex;
+    align-items: center;
+}
+
+.costs {
+    margin-top: 70px;
+}
+
+.costs__phone {
+    margin: 0 30px 0 30px;
+}
+
+.costs__title {
+    font-family: var(--f400);
+    font-weight: bold !important;
+    font-size: 22px;
+    line-height: 20px;
+
+}
+
+.costs__cost {
+    margin: 40px 0 20px 0;
+    font-family: var(--f400);
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.costs__product {
+    font-family: var(--f400);
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 10px;
+}
+
+.costs__xarakteristika {
+    font-size: 14px;
+    line-height: 25px;
+    font-family: var(--f400);
+}
+
+.costs__buying {
+    margin-top: 30px;
+}
+
+.costs__btn {
+    margin-left: 30px;
+}
+
+.costs__icon {
+    margin-right: 12px;
+}
+
+.play {
+    position: relative;
+    margin: 40px 0 70px 0;
+}
+
+.play__counting {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.play__title {
+    left: 0 !important;
+    margin-top: 20px;
+    font-size: 48px;
+    line-height: 65px;
+    font-family: var(--f700);
+    font-weight: lighter !important;
+}
+
+.play__text {
+    margin: 39px 0 116px 0;
+    font-size: 24px;
+    line-height: 30px;
+    font-family: var(--f400);
+    max-width: 454px;
+    display: inline-block;
+}
+
+.play__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* media */
+
+@media (max-width:1400px) {
+    .menu__inner {
+        max-width: 100%;
+        justify-content: center !important;
+    }
+
+    .playstation__img {
+        max-width: 100%;
+    }
+
+    .nav__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .controller__img {
+        max-width: 100%;
+        padding-right: 80px;
+    }
+
+    .controller__fon {
+        background: none;
+    }
+
+    .play__img {
+        width: 100%;
+    }
+}
+
+@media (max-width:1200px) {
+    .carousel__right {
+        flex-wrap: wrap;
+
+    }
+
+    .carousel__title {
+        margin-top: 0;
+    }
+
+    .carousel__btn  {
+        margin: 30px 0 40px;
+    }
+
+    .skidka__grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .costs {
+        flex-wrap: wrap;
+    }
+
+    .playstation__title {
+    margin: 10px 0 30px;
+    font-size: 25px;
+    line-height: 30px;
+    }
+
+    .playstation__logo {
+        margin-top: 30px;
+    }
+
+
+    .footer__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer__contact {
+        margin-top: 20px;
+        padding: 0 !important;
+        text-align: center;
+    }
+
+    .footer__logo {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .footer__sign-up {
+        padding-left: 0 !important;
+        text-align: center;
+    }
+
+    .controller__title {
+        font-size: 30px;
+        line-height: 45px;
+        margin: 10px 20px;
+    }
+
+    .controller__fon {
+        margin-top: 200px ;
+    }
+
+    .controller__text {
+        font-size: 18px;
+        line-height: 25px;
+    }
+
+    .controller__button {
+        padding: 8px 25px;
+        font-size: 14px;
+        line-height: 20px;
+        margin: 0 0 10px 10px;
+    }
+}
+
+@media (max-width:1000px) {
+
+    .controller__text {
+        font-size: 16px;
+        line-height: 25px;
+        max-width: 100%;
+    }
+
+    .controller__button {
+        padding: 8px 25px;
+        font-size: 14px;
+        line-height: 20px;
+        margin: 0 0 10px 10px;
+    }
+
+    .play__title {
+        margin-top: 10px;
+        font-size: 40px;
+        line-height: 40px;
+    }
+    .play__text {
+        margin: 25px 0 20px 0;
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .play__btn {
+        font-size: 16px;
+        line-height: 20px;
+        padding: 10px 10px;
+
+    }
+}
+
+@media (max-width:768px) {
+    .menu__inner {
+        padding: 5px 0 0 0;
+    }
+    .nav__logotip {
+        width: 50%;
+    }
+
+    .nav__info {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .nav__control {
+        padding: 0 10px 0 10px;
+       height: 40px !important;
+    }
+
+    .nav__search {
+        width: 150px;
+        font-size: 12px;
+        line-height: 15px;
+        height: 40px;
+    }
+
+    .nav__btn {
+        font-size: 14px;
+        line-height: 15px;
+    }
+    .nav__menu {
+        min-width: 50px !important;
+    }
+
+    .dropdown__language{
+        font-size: 12px;
+        line-height: 15px;
+       
+    }
+
+    .carousel__img {
+        margin-top: 30px;
+        width: 70%;
+    }
+
+    .carousel__title {
+            margin-top: 20px;
+            font-size: 30px;
+            line-height: 40px;
+    }
+
+    .button {
+        padding: 10px 30px;
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+
+    .skidka__img {
+        width: 100%;
+    }
+
+    .skidka__title {
+        font-size: 18px;
+        line-height: 18px;
+    }
+    
+    .skidka__text {
+        font-size: 20px;
+        line-height: 12px;
+    }
+
+    .skidka__off {
+        margin: 20px 0 15px 20px;      
+        width: 50px;
+        height: 50px;     
+        font-size: 15px;
+        line-height: 15px;
+        
+    }
+
+    .cards__title {
+        margin: 30px 0 10px;
+        font-size: 25px;
+        line-height: 30px;
+        
+    }
+
+    .playstation__logo {
+        margin-top: 30px;
+        width: 50%;
+    }
+
+    .playstation__title {
+        margin: 10px 0 30px;
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    .controller__title {
+        margin: 0 20px;
+    }
+
+    .controller__text {
+        font-size: 14px;
+        line-height: 25px;
+        max-width: 100%;
+    }
+
+    .controller__button {
+        padding: 4px 16px;
+        font-size: 12px;
+        line-height: 15px;
+        margin: 0 0 5px 5px;
+    }
+
+    .controller__fon {
+        margin-top: 100px ;
+    }
+
+    .controller__img {
+        padding-right: 50px;
+    }
+
+    .controller__next-inner {
+        padding: 0 !important;
+        margin: 24px 0 24px 0;
+    }
+
+
+    .page-link {
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+    .play__title {
+        margin-top: 10px;
+        font-size: 25px;
+        line-height: 25px;
+    }
+    .play__text {
+        margin: 10px 0 10px 0;
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .play__btn {
+        font-size: 14px;
+        line-height: 16px;
+        padding: 10px 10px;
+
+    }
+
+    .costs__phone-w {
+        width: 150%;
+    }
+    .costs__pieces-w {
+        width: 150%;
+    }
+
+        .footer__logotip {
+            width: 50%;
+        }
+
+        .footer__search {
+            display: inline-block;
+            width: 150px;
+            font-size: 14px;
+            line-height: 16px;
+            height: 40px;
+            
+        }
+
+        .footer__control {
+            padding: 0 200px 0 10px;
+            height: 40px !important;
+            max-width: 220px;
+        }
+
+        .footer__subscribe-text {
+            font-size: 12px;
+            line-height: 10px;
+
+        }
+
+        .footer__subscribe {
+            padding-left: 0 !important;
+        }
+
+        .footer__down {
+            padding-top: 20px;
+        }
+
+        .footer__sign {
+            padding: 10px 0 20px 0;
+        }
+}
+
+@media (max-width:620px) {
+
+    .controller__title {
+        font-size: 24px;
+        line-height: 24px;
+        margin: 0 20px;
+    }
+
+    .controller__text {
+        display: none;
+    }
+
+    .controller__button {
+        padding: 4px 16px;
+        font-size: 12px;
+        line-height: 15px;
+        margin: 0 0 5px 5px;
+    }
+
+    .controller__fon {
+        margin-top: 50px ;
+    }
+
+    .controller__img {
+        padding-right: 20px;
+    }
+
+    .controller__next-inner {
+        padding: 0 !important;
+        margin: 20px 0 20px 0;
+    }
+
+    .page-link {
+        font-size: 18px;
+        line-height: 22px;
+    }
+}
+@media (max-width:520px) {
+    .menu__inner {
+        padding: 5px 0 0 0;
+        flex-wrap: wrap;
+    }
+
+    .menu__adress {
+        justify-content: space-between;
+    }
+
+    .menu__link{
+        padding-left: 10px !important;
+        font-size: 12px;
+    }
+
+    .menu__btn {
+        font-size: 14px;
+    }
+
+    .nav__logotip {
+        width: 50%;
+    }
+
+    .nav__info {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .nav__control {
+        padding-left: 10px !important;
+       height: 30px !important;
+       font-size: 12px;
+    }
+
+    .nav__search {
+        width: 100px;
+        font-size: 8px;
+        line-height: 12px;
+        height: 30px;
+    }
+
+    .nav__btn {
+        font-size: 12px;
+        line-height: 12px;
+        padding: 10px 10px;
+    }
+
+    .nav__list {
+        flex-wrap: wrap;
+    }
+    .nav__menu {
+        min-width: 50px !important;
+    }
+
+    .dropdown-item {
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    
+
+    .carousel__img {
+        margin-top: 10px;
+        width: 50%;
+    }
+
+    .carousel__title {
+            margin-top: 10px;
+            font-size: 18px;
+            line-height: 25px;
+    }
+
+    .carousel__btn {
+        margin: 15px 40px 35px ;
+    }
+
+    .button {
+        padding: 7px 15px;
+        font-size: 10px;
+        line-height: 18px;
+    }
+
+
+    .skidka__img {
+        width: 100%;
+    }
+
+    .skidka__title {
+        font-size: 14px;
+        line-height: 18px;
+        margin-bottom: 0 !important;
+    }
+    
+    .skidka__text {
+        font-size: 12px;
+        line-height: 12px;
+    }
+
+    .skidka__off {
+        margin: 7px 0 10px 7px;      
+        width: 40px;
+        height: 40px;     
+        font-size: 12px;
+        line-height: 15px;
+        
+    }
+
+    .skidka__name {
+        padding: 10px 0 8px 10px
+    }
+
+    .skidka__button {
+        margin: 10px 0 20px 0;
+    }
+
+    .cards__title {
+        margin: 1px 0 10px;
+        font-size: 18px;
+        line-height: 20px;
+        
+    }
+
+    .cards__menu-phone {
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    .cards__text {
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+
+    .playstation__logo {
+        margin-top: 10px;
+        width: 30%;
+    }
+
+    .playstation__title {
+        margin: 10px 0 10px;
+        font-size: 14px;
+        line-height: 18px;
+        max-width: 100px;
+        }
+
+        .costs {
+            margin-top: 20px;
+        }
+
+        .costs__title {
+            font-size: 16px;
+            line-height: 16px;
+        }
+
+        .costs__cost {
+            font-size: 16px;
+            line-height: 16px;
+            margin: 20px 0 10px;
+        }
+
+        .controller__title {
+            font-size: 20px;
+            line-height: 24px;
+            margin: 0 20px;
+        }
+    
+    
+        .controller__button {
+            padding: 2px 10px;
+            font-size: 12px;
+            line-height: 15px;
+            margin: 0 0 5px 5px;
+        }
+    
+        .controller__fon {
+            margin-top: 10px ;
+        }
+    
+        .controller__img {
+            padding-right: 10px;
+        }
+    
+        .controller__next-inner {
+            padding: 0 !important;
+            margin: 10px 0 10px 0;
+        }
+    
+        .page-link {
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        .play__title {
+            margin-top: 10px;
+            font-size: 18px;
+            line-height: 25px;
+        }
+        .play__text {
+            margin: 5px 0 5px 0;
+            font-size: 14px;
+            line-height: 20px;
+        }
+    
+        .play__btn {
+            font-size: 12px;
+            line-height: 16px;
+            padding: 5px 5px;
+    
+        }
+    
+        .costs__phone-w {
+            width: 150%;
+        }
+        .costs__pieces-w {
+            width: 150%;
+        }
+
+        .footer__logotip {
+            width: 50%;
+        }
+
+        .footer__search {
+            display: inline-block;
+            width: 100px;
+            font-size: 10px;
+            line-height: 16px;
+            height: 40px;
+            
+        }
+
+        .footer__control {
+            padding: 0 140px 0 10px;
+            height: 30px !important;
+            max-width: 160px;
+        }
+
+        .footer__subscribe-text {
+            font-size: 12px;
+            line-height: 10px;
+
+        }
+
+        .footer__subscribe {
+            padding-left: 0 !important;
+        }
+
+        .footer__down {
+            padding-top: 10px;
+        }
+
+        .footer__sign {
+            padding: 5px 0 10px 0;
+        }
+
+        .footer__contact-logo{
+            width: 20px;
+            
+        }
+
+        .footer__down-text {
+            font-size: 12px;
+            line-height: 14px;
+        }
+
+        .footer__search {
+            font-size: 10px;
+        }
+}
+
+@media(max-width:362px) {
+    .menu__adress {
+        padding: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
